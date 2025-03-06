@@ -25,10 +25,10 @@ jobs:
         run: npm install
 
       - name: 🔨 Build Angular
-        run: npm run build -- --output-path=dist --base-href /deploy-angular-on-github-example/browser/
+        run: npm run build -- --output-path=dist --base-href /deploy-angular-on-github-example/
 
       - name: 🚀 Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist  # Thư mục build của Angular
+          folder: dist/deploy-angular-on-github-example/browser
